@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>源石之约 · 明日方舟世界观动画短剧</title>
+<style>
+  :root{
+    --bg:#0a0c12;
+    --panel:#12151f;
+    --panel-2:#171b28;
+    --line:#262c3d;
+    --text:#e8ecf5;
+    --muted:#8d97ad;
+    --amber:#ff9d4d;
+    --amber-2:#ff6a3d;
+    --cyan:#4fd6e0;
+    --blue:#4a86ff;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  body{
+    background:radial-gradient(1200px 700px at 15% -10%, #1b1830 0%, transparent 60%),
+               radial-gradient(900px 600px at 100% 0%, #10202c 0%, transparent 55%),
+               var(--bg);
+    color:var(--text);
+    font-family:"PingFang SC","Microsoft YaHei","Segoe UI",system-ui,sans-serif;
+    line-height:1.7;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:1080px;margin:0 auto;padding:56px 24px 80px;}
+  .eyebrow{
+    display:inline-block;font-size:12px;letter-spacing:.28em;color:var(--amber);
+    border:1px solid rgba(255,157,77,.35);border-radius:999px;padding:6px 14px;margin-bottom:22px;
+  }
+  h1{font-size:clamp(32px,5vw,52px);line-height:1.15;letter-spacing:.02em;font-weight:800;}
+  h1 .accent{
+    background:linear-gradient(100deg,var(--amber) 0%,var(--amber-2) 45%,var(--cyan) 100%);
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .sub{color:var(--muted);margin-top:14px;font-size:16px;max-width:640px;}
+  .hero-media{
+    margin-top:34px;border-radius:18px;overflow:hidden;border:1px solid var(--line);
+    background:#000;box-shadow:0 24px 60px -24px rgba(0,0,0,.9), 0 0 0 1px rgba(255,157,77,.06);
+  }
+  video{display:block;width:100%;height:auto;background:#000;}
+  .meta-row{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px;}
+  .chip{
+    font-size:12.5px;color:var(--muted);background:var(--panel);border:1px solid var(--line);
+    border-radius:8px;padding:6px 12px;
+  }
+  .chip b{color:var(--text);font-weight:600;}
+  section{margin-top:64px;}
+  .sec-head{display:flex;align-items:center;gap:14px;margin-bottom:24px;}
+  .sec-num{
+    font-size:13px;font-weight:700;color:var(--amber);border:1px solid rgba(255,157,77,.35);
+    border-radius:6px;padding:3px 9px;letter-spacing:.1em;
+  }
+  h2{font-size:22px;font-weight:700;letter-spacing:.02em;}
+  .lead{color:var(--muted);font-size:15.5px;}
+  .lead strong{color:var(--text);font-weight:600;}
+  .cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px;}
+  .card{
+    background:linear-gradient(180deg,var(--panel-2),var(--panel));
+    border:1px solid var(--line);border-radius:16px;overflow:hidden;
+  }
+  .card .thumb{aspect-ratio:4/5;background:#0d1017;display:flex;align-items:center;justify-content:center;overflow:hidden;}
+  .card .thumb img{width:100%;height:100%;object-fit:contain;}
+  .card .body{padding:20px 20px 22px;}
+  .card h3{font-size:18px;margin-bottom:4px;}
+  .card .role{font-size:12px;letter-spacing:.16em;color:var(--cyan);text-transform:uppercase;margin-bottom:12px;}
+  .card p{font-size:14px;color:var(--muted);}
+  .shot{
+    display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);gap:0;
+    background:var(--panel);border:1px solid var(--line);border-radius:16px;overflow:hidden;margin-bottom:18px;
+  }
+  .shot video{height:100%;object-fit:cover;}
+  .shot .info{padding:24px 26px;display:flex;flex-direction:column;justify-content:center;}
+  .shot .tag{font-size:12px;letter-spacing:.2em;color:var(--amber);margin-bottom:8px;}
+  .shot h3{font-size:18px;margin-bottom:10px;}
+  .shot p{font-size:14px;color:var(--muted);}
+  .narration{
+    margin-top:8px;background:linear-gradient(180deg,rgba(255,157,77,.10),rgba(79,214,224,.06));
+    border:1px solid var(--line);border-left:3px solid var(--amber);border-radius:12px;padding:22px 26px;
+  }
+  .narration .q{font-size:17px;line-height:1.9;}
+  .narration .q span{color:var(--amber);}
+  footer{margin-top:64px;padding-top:24px;border-top:1px solid var(--line);color:var(--muted);font-size:13px;}
+  @media (max-width:760px){
+    .shot{grid-template-columns:1fr;}
+    .wrap{padding:36px 16px 60px;}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <span class="eyebrow">ARKNIGHTS · ANIMATED SHORT</span>
+  <h1>源石之约<br><span class="accent">在泰拉，每一颗孤独的心都在等一束光</span></h1>
+  <p class="sub">天灾过后的废弃都市，源石结晶在余烬中呼吸。罗德岛的领袖与一名独自求生的双角少女，在废墟中央相遇——这不是一场战斗，而是一次伸手。</p>
+
+  <div class="hero-media">
+    <video src="arknights_short_drama.mp4" controls playsinline poster="keyframe_01_meeting.jpg"></video>
+  </div>
+  <div class="meta-row">
+    <span class="chip">时长 <b>18.4 秒</b></span>
+    <span class="chip">画幅 <b>1280 × 720 / 24fps</b></span>
+    <span class="chip">风格 <b>2D 赛璐璐 · 电影质感</b></span>
+    <span class="chip">分镜 <b>4 镜</b></span>
+    <span class="chip">生成 <b>Seedream 关键帧 + Seedance 动态</b></span>
+  </div>
+
+  <section>
+    <div class="sec-head"><span class="sec-num">01</span><h2>世界观与设定</h2></div>
+    <p class="lead">泰拉大陆，天灾频发，源石结晶如花般从大地裂痕中绽放，也把「感染者」的烙印刻进无数人的命运。<strong>罗德岛</strong>以医药之名行走于废土之上，收容、治疗、并在必要时刻举起武器。<br><br>本片取景于一次天灾后的都市废墟。两位少女，一个背负着整个组织的重量，一个只背负着自己的生存——她们的对峙，没有胜负，只有选择。</p>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="sec-num">02</span><h2>登场人物</h2></div>
+    <div class="cards">
+      <div class="card">
+        <div class="thumb"><img src="keyframe_02_hand.jpg" alt="阿米娅"></div>
+        <div class="body">
+          <h3>阿米娅 Amiya</h3>
+          <div class="role">罗德岛 · 公开领袖</div>
+          <p>卡斯特族少女，棕色长发与一对兔耳，湛蓝的眼睛里盛着与年龄不符的沉静。黑色机能大衣印着 RHODES ISLAND 的编号，是她身份的徽记。她从不先拔刀——她总是先伸手。</p>
+        </div>
+      </div>
+      <div class="card">
+        <div class="thumb"><img src="ref_chen.png" alt="小陈"></div>
+        <div class="body">
+          <h3>小陈 Chen</h3>
+          <div class="role">废土 · 独行者</div>
+          <p>灰黑双马尾，青绿色瞳孔，一对自灰白渐变至青蓝、再沉入品红的弯角，是她与生俱来的印记。蓝白战装配白色红边披风，胸前永远横着一把武器。冷漠是她的盔甲，而角尖的微光会出卖她的心绪。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="sec-num">03</span><h2>分镜脚本</h2></div>
+
+    <div class="shot">
+      <video src="shot01_ruins.mp4" controls playsinline muted loop poster="keyframe_01_meeting.jpg"></video>
+      <div class="info">
+        <div class="tag">SHOT 01 · 全景缓推 · 5s</div>
+        <h3>废墟中的脚步声</h3>
+        <p>紫橙色的黄昏压在天灾过后的废弃都市上，巨大的橙红源石结晶在废墟中央缓缓呼吸。阿米娅自画面左侧走入，兔耳微颤，目光扫过每一处瓦砾——她在寻找幸存者，而不是敌人。</p>
+      </div>
+    </div>
+
+    <div class="shot">
+      <video src="shot02_turnaround.mp4" controls playsinline muted loop poster="keyframe_01_meeting.jpg"></video>
+      <div class="info">
+        <div class="tag">SHOT 02 · 中景 · 5s</div>
+        <h3>回头的双角少女</h3>
+        <p>结晶旁，背对镜头的小陈猛然回头。她握紧胸前的武器，双角泛起青蓝色微光——那是源石技艺将启的征兆，也是恐惧的具象。风掀起她的双马尾与披风，戒备在她眼里结成一层薄冰。</p>
+      </div>
+    </div>
+
+    <div class="shot">
+      <video src="shot03_hand.mp4" controls playsinline muted loop poster="keyframe_02_hand.jpg"></video>
+      <div class="info">
+        <div class="tag">SHOT 03 · 近景特写 · 5s</div>
+        <h3>掌心的一束蓝光</h3>
+        <p>阿米娅没有举刀。她缓缓放下戒备，向小陈伸出右手，掌心凝起柔和的蓝色源石技艺光芒，光点旋转上升。小陈怔住了——那是她第一次看见，力量可以不是用来伤害的。</p>
+      </div>
+    </div>
+
+    <div class="shot">
+      <video src="shot04_together.mp4" controls playsinline muted loop poster="keyframe_01_meeting.jpg"></video>
+      <div class="info">
+        <div class="tag">SHOT 04 · 全景拉远升空 · 5s</div>
+        <h3>走向灯火</h3>
+        <p>两只手紧紧相握，周遭所有源石结晶同时亮起温柔的蓝光，火星与余烬在风中飞舞。镜头缓缓升空，两个身影并肩走向地平线上那座灯火通明的移动城市——罗德岛，天光渐亮。</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <div class="sec-head"><span class="sec-num">04</span><h2>旁白</h2></div>
+    <div class="narration">
+      <p class="q">「<span>在泰拉大陆，每一颗孤独的心，都在等待一束光。</span>」</p>
+    </div>
+  </section>
+
+  <footer>
+    《源石之约》 · 明日方舟世界观同人动画短剧 · 由 Seedream 生成关键帧、Seedance 生成动态分镜后剪辑合成。
+  </footer>
+
+</div>
+</body>
+</html>
